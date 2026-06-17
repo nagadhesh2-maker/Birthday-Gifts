@@ -59,7 +59,7 @@
                 height: 500px;
                 display: flex;
                 padding: 10px;
-                border-radius: 20px;
+                border-radius: 10px;
                 margin: auto;
                 max-width: 350px;
                
@@ -68,7 +68,7 @@
                 width: 300px;
                 height: auto;
                 object-fit: cover;
-                border-radius: 115px;
+                border-radius: 15px;
                 position: relative;
                 z-index: 2;
             }
@@ -149,8 +149,21 @@
                 
             }
             showImage();
+            function nextImage(){
+                current++;
+                if(current>=images.length){
+                    current=0;
+                }showImage();
+            }
+            function prevImage(){
+
+                current--;
+                if(current<0){
+                    current=images.length-1;
+                }showImage();
+            }
            
-            
+            const photo=document.getElementById("photo");
             let startX=0;
 
 photo.addEventListener("touchstart",e=>{
