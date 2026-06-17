@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Love letter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: linear-gradient(135deg,#120018,#2d0b45);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px 10px;
+        }
+        .container{
+            text-align: center;
+        }
+        .envelope{
+            font-size: 120px;
+            transition: 0.5s;
+        }
+        button{
+            margin-top: 20px;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            background: #8b5cf6;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            font-family: cursive;
+        }
+        button:hover{
+            transform: scale(1.05);
+        }
+        .letter{
+            display: none;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 700px;
+            background:#f5e6c8;
+            color: #3b2f2f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0.0.0.0.4);
+            border: 3px solid #d6b37f;
+            text-align: left;
+            line-height: 2;
+            animation: fade 1s ease;
+            font-size: 18px;
+        }
+        @keyframes fade{
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+            color:#7a4f1d;
+        }
+        p{
+            font-family: cursive;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope"  id="envelope">💌</div>
+        <button onclick="openLetter()" id="openBtn">This for You💝</button>
+        <div class="letter" id="letter">
+            <h2>
+                To My Dear bby gul
+            </h2>
+            <p>Oii Papa💜,
+                <br><br>
+            Wish you many more happy returns of the day honey💖.First time onta pesunapa I don't anything different.Yedho pala varusham pazhaguna maari oru comfort irundhuchu,apa dha enakku purinjichu nee enakku evlo important nuu🫣.Nee call pannumbhodhu onta pesanunu naraya prepare la panniruke aana onnoda voice ketta udane ellame marandhuruven😅.Oru naal ketala en melavandhamaari fell vera yaaru melaum vraralayanu. Illa I think this place is already reserved for you pola🤭.Enakku oru aasa irukku....adhunnadakkumanu theriyala.Life la oru full day un kooda spend pannanu call,tension,work edhume illama just nee naa mattu.Nee ketala en daa ennaya love panra apdi naa enna da pannenu.Enakku oru azhagana poodhu uzhagatha koodutha.Apro ellathume sollama sollra andha kannu👀 bushu bushu nu chubbyana kanno apro andha smile I wanna see that in my whole life😊.Anyways,Happy Birthday My Dear💖. Thanks for everything.You are the best part of my life🥹.I love you💜<br><br>By,<br>Yours...💜      
+            </p>
+        </div>
+    </div>
+    <script>
+        function openLetter(){
+            document.getElementById("envelope").innerHTML="B";
+            document.getElementById("letter").style.display="block";
+            document.getElementById("openBtn").style.display="none";
+        }
+    </script>
+</body>
+</html>

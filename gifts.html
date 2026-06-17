@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="white=device-width,initial-scale=1.0">
+        <title>Special Gifts</title>
+        <style>
+            *{
+
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: cursive;
+            }
+            body{
+                background: #120018;
+                color: white;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                text-align: center;
+                width: 100%;
+
+            }
+            h1{
+                margin-bottom: 40px;
+                color: #d69cff;
+                font-size: 28px;
+                padding: 0 15px;
+            }
+            .gifts{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                align-items: center;
+                flex-wrap: nowrap;
+                
+            }
+            .gift img{
+                width: 120px;
+                height: 120px;
+                object-fit: contain;
+            }
+            .gift{
+                width: 120px;
+                height: 120px;
+                
+                border-radius: 20px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size:70px;
+                transition: 0.3s;
+            }
+            .gift:hover{
+                transform: translateY(-10px)
+                scale(1.05);
+            }
+            .gift-item{
+                width: 180px;
+                text-align: center;
+            }
+            p{
+                margin-top: 15px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                A few pieces of my heart,wrapped just for you
+            </h1>
+            <div class="gifts">
+                <div class="gift-item">
+                <div class="gift" onclick="location.href='letter.html'"><img src="gift.png"></div>
+                
+            </div>
+            <div class="gift-item">
+                <div class="gift" onclick="location.href='gallery.html'"><img src="gift.png"></div>
+            
+            
+            </div>
+        
+        <div class="gift-item">
+            <div class="gift" onclick="location.href='song.html'"><img src="gift.png"></div>
+            
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Unlock your supries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        body{
+            background: #120018;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 20px;
+            color: #d69cff;
+        }
+        #display{
+            font-size: 35px;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            min-height: 50px;
+        }
+        .keypad{
+            display: grid;
+            grid-template-columns: repeat(3,80px);
+            gap: 15px;
+            justify-content: center;
+        }
+        button{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .action{
+            background: #a855f7;
+            color: white;
+        }
+        #error{
+            margin-top: 20px;
+            color: #ff7b7b;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>
+                one last step before your supries
+            </h2>
+            <div id="display"></div>
+            <div class="keypad">
+                <button onclick="addNum('1')">1</button>
+                <button onclick="addNum('2')">2</button>
+                <button onclick="addNum('3')">3</button>
+                <button onclick="addNum('4')">4</button>
+                <button onclick="addNum('5')">5</button>
+                <button onclick="addNum('6')">6</button>
+                <button onclick="addNum('7')">7</button>
+                <button onclick="addNum('8')">8</button>
+                <button onclick="addNum('9')">9</button>
+                <button class="action" onclick="clearPass()">X</button>
+                <button onclick="addNum('0')">0</button>
+                <button class="action" onclick="checkPass()">✓</button>
+            </div>
+            <div id="error"></div>
+        </div>
+        <script>
+            let password="";
+            function addNum(num){
+                if(password.length<4){
+                    password+=num;
+                    document.getElementById("display").innerHTML=password;
+                }
+            }
+            function clearPass(){
+                password="";
+                document.getElementById("display").innerHTML="";
+                document.getElementById("error").innerHTML="";
+            }
+            function checkPass(){
+                if(password==="1806"){
+                    window.location.href="gifts.html";
+                }
+                else{
+                    
+                    document.getElementById("error").innerHTML="Don't worry honney.Try again";
+                    password="";
+                    document.getElementById("display").innerHTML="";
+                }
+            }
+        </script>
+    </body>
+
+</html>

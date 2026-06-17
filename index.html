@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width.initial-scale=1.0">
+        <title>
+            Happy Birthday My Dear Bby Gurl
+        </title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: cursive;
+            }
+            body{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #120018;;
+                color: white;
+                text-align: center;
+            }
+            .container{
+                width: 90%;
+            }
+            
+            h2{
+                margin-bottom: 60px;
+                color:#d69cff;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: cursive;
+                font-size: 24px;
+                width: 90%;
+            }
+            #countdown{
+                font-size: 55px;
+                font-weight: bold;
+                line-height: 1.2;
+                text-shadow: 0 0 10px #c77dff,
+                0 0 10px #c77dff,
+                0 0 10px #c77dff;
+            }
+            .lable{
+                font-size: 20px;
+                margin-top: 20px;
+                color: #c9a4ff; 
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="countdown">
+            <h2>
+                Wait for a few seconds madam😋
+            </h2>
+            <div id="countdown">
+                Loading.....
+            </div>
+            <div class="lable">
+                
+            </div>
+
+        </div>
+        <script>
+            const targetDate=new Date(2026,5,17,19,15,0).getTime();
+            const timer=setInterval(function(){
+                const now=new Date().getTime();
+                const distance=targetDate-now;
+                const days=Math.floor(distance/(1000*60*60*24));
+                const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+                const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+                 const seconds=Math.floor((distance%(1000*60))/(1000));
+                 document.getElementById("countdown").innerHTML=days+":"+hours+":"+minutes+":"+seconds;
+                 if(distance<0){
+                    clearInterval(timer);
+                    window.location.href="lock.html";
+                 }
+            },1000);
+        </script>
+    </body>
+</html>
+ 

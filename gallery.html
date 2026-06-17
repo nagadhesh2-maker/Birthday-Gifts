@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>Our Memories</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: cursive;
+            }
+            body{
+                background: linear-gradient(135deg,#120018,#2d0b45);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+            }
+            .container{
+                text-align: center;
+                width: 90%;
+            }
+            h1{
+                margin-bottom: 15px;
+                color: #d8b4fe;
+            }
+            .subtitle{
+                margin-bottom: 30px;
+                font-size: 18px;
+                color: #e9d5ff;
+            }
+            .gallery-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            button{
+                width: 60px;
+                height: 60px;
+                border: none;
+                border-radius: 50%;
+                font-size: 30px;
+                cursor: pointer;
+                background: #b983ff;
+                color: white;
+            }
+            button:hover{
+                transform: scale(1.1);
+            }
+            .frame{
+                position: relative;
+                width: 100%;
+               justify-content: center;
+               align-items: center;
+                height: 500px;
+                display: flex;
+                padding: 10px;
+                border-radius: 20px;
+                margin: auto;
+                max-width: 350px;
+               
+            }
+            #photo{
+                width: 300px;
+                height: auto;
+                object-fit: cover;
+                border-radius: 115px;
+                position: relative;
+                z-index: 2;
+            }
+            .frame img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+                
+            }
+            .counter{
+                margin-top: 20px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                Our beautiful memories
+            </h1>
+            <p class="subtitle">Every picture tells a story,but my favourite story is you</p>
+            <div class="gallery-box">
+                
+               
+                <div class="frame">
+                    
+                    <img id="photo" src="img1.jpg">
+                    </div>
+            </div>
+            
+        </div>
+        <script>
+            const images=[
+                
+                "img1.jpg",
+                "img2.jpg",
+                "img3.jpg",
+                "img4.jpg",
+                "img5.jpg",
+                "img6.jpg",
+                "img7.jpg",
+                "img8.jpg",
+                "img9.jpg",
+                "img10.jpg",
+                "img11.jpg",
+                "img12.jpg",
+                "img13.jpg",
+                "img14.jpg",
+                "img15.jpg",
+                "img16.jpg",
+                "img17.jpg",
+                "img18.jpg",
+                "img19.jpg",
+                "img20.jpg",
+                "img21.jpg",
+                "img22.jpg",
+                "img23.jpg",
+                "img24.jpg",
+                "img25.jpg",
+                "img26.jpg",
+                "img27.jpg",
+                "img28.jpg",
+                "img29.jpg",
+                "img30.jpg",
+                "img31.jpg",
+                "img32.jpg",
+                "img33.jpg",
+                
+
+        ];
+            let current=0;
+            function showImage(){
+                document.getElementById("photo").src=images[current];
+                let prev=(current-1+images.length)%images.length;
+                let next=(current+1)%images.length;
+               
+                
+            }
+            showImage();
+           
+            
+            let startX=0;
+
+photo.addEventListener("touchstart",e=>{
+startX=e.touches[0].clientX;
+});
+
+photo.addEventListener("touchend",e=>{
+let endX=e.changedTouches[0].clientX;
+
+if(startX-endX>50){
+nextImage();
+}
+
+if(endX-startX>50){
+prevImage();
+}
+});
+        </script>
+    </body>
+</html>
